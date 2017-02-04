@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsCodingPuzzle
+namespace CodingPuzzle
 {
-    class Program
+    class PuzzleMatrix
     {
         static void Main(string[] args)
         {
