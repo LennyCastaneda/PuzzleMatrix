@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red43\green145\blue175;\red163\green21\blue21;
+\red128\green128\blue128;\red0\green128\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c100000;\csgenericrgb\c16863\c56863\c68627;\csgenericrgb\c63922\c8235\c8235;
+\csgenericrgb\c50196\c50196\c50196;\csgenericrgb\c0\c50196\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs19 \cf2 using\cf0  System;\
+\cf2 using\cf0  System.Collections.Generic;\
+\cf2 using\cf0  System.Linq;\
+\cf2 using\cf0  System.Text;\
+\cf2 using\cf0  System.Threading.Tasks;\
+\
+\cf2 namespace\cf0  CsCodingPuzzle\
+\{\
+    \cf2 class\cf0  \cf3 Program\cf0 \
+    \{\
+        \cf2 static\cf0  \cf2 void\cf0  Main(\cf2 string\cf0 [] args)\
+        \{\
+            \cf3 Console\cf0 .WriteLine(\cf4 "Enter the words you wish to search in the array. Separate each word by spaces. When finished typing all searchable words press enter."\cf0 );\
+        \}\
+    \}\
+\
+    \cf2 public\cf0  \cf2 static\cf0  \cf2 class\cf0  \cf3 PuzzleSolver\cf0 \
+    \{\
+        \cf2 public\cf0  \cf2 static\cf0  \cf2 string\cf0 [] DICTIONARY = \{ \cf4 "OX"\cf0 , \cf4 "CAT"\cf0 , \cf4 "TOY"\cf0 , \cf4 "AT"\cf0 , \cf4 "DOG"\cf0 , \cf4 "CATAPULT"\cf0 , \cf4 "T"\cf0  \};\
+\
+        \cf2 static\cf0  \cf2 bool\cf0  IsWord(\cf2 string\cf0  testWord)\
+        \{\
+            \cf2 if\cf0  (DICTIONARY.Contains(testWord))\
+                \cf2 return\cf0  \cf2 true\cf0 ;\
+            \cf2 return\cf0  \cf2 false\cf0 ;\
+        \}\
+\
+        \cf5 /**\cf6  Load the dictionary into tree, Process the array in all directions and add the word to a list, \cf0 \
+         \cf5 *\cf6  Method will take row and column numbers as input and it will return the all the unique dictionary words in all directions \cf5 */\cf0 \
+        \cf2 public\cf0  \cf2 static\cf0  \cf2 int\cf0  FindWords(\cf2 char\cf0 [,] puzzle)\
+        \{\
+            \cf2 string\cf0  UserInput;\
+            \cf2 int\cf0  NumberOfOccurrances = 0;\
+\
+            UserInput = \cf3 Console\cf0 .ReadLine();\
+\
+            \cf6 // FindWords should return the number of all non-distinct occurrences of the words found in the array, horizontally, vertically or diagonally, and also the reverse in each direction.\cf0 \
+            \cf6 // It should be capable of scaling to puzzles with dimensions such as 4x4, 6x9, 9x9.\cf0 \
+            \cf2 return\cf0  NumberOfOccurrances;\
+        \}\
+    \}\
+\}\
+}
